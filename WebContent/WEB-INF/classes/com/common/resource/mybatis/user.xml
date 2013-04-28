@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="user">
+	<select id="countAll" resultType="int">
+		select count(*) c from user;
+	</select>
+	<select id="selectAll" resultType="com.demo.study.system.user.entity.User">
+		select * from user order by userName asc
+	</select>
+	<insert id="insert" parameterType="com.demo.study.system.user.entity.User">
+		insert into user(userName,password,comment)
+		values(#{userName},#{password},#{comment})
+	</insert>
+	<update id="update" parameterType="com.demo.study.system.user.entity.User">
+		update user set userName=#{userName},password=#{password},comment=#{comment}
+		where userName=#{userName}
+	</update>
+	<delete id="delete" parameterType="int">
+		delete from user where userName=#{userName}
+	</delete>
+	<select id="findByUserName" parameterType="String"
+		resultType="com.demo.study.system.user.entity.User">
+		select * from user where userName=#{userName}
+	</select>
+</mapper>

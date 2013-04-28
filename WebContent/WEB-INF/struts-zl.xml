@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <!-- 这个是防止struts2拦截其它路径的离不开求，比如 /dwr这样的 -->
+    <constant name="struts.action.extension" value="action,do"/>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.i18n.encoding" value="utf-8"></constant> 
+	<!-- 下面的设置是可以静态的访问 -->
+	<constant name="struts.custom.i18n.resources" value="com.demo.resource.message"></constant>
+	 <constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+	 <include file="com/common/resource/struts/system.xml" />
+</struts>
+ 

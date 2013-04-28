@@ -1,0 +1,13 @@
+import java.util.*;
+
+
+import ${basepackage}.bean.${className}Bean;
+import ${basepackage}.dao.${className}Dao;
+import ${basepackage}.form.${className}Form;
+ 
+/**
+ * @author zhanglin
+ * @version 1.0
+ * @since 1.0
+ */
+

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+	<!-- access -->
+
+
+	<!-- property name="connection.url"> jdbc:access:///E:/workspace/anyData003.mdb 
+		</property> <property name="myeclipse.connection.profile">access</property> 
+		<property name="connection.driver_class"> com.hxtt.sql.access.AccessDriver 
+		</property> <property name="show_sql">true</property> <property name="connection.username"></property> 
+		<property name="connection.password"></property> <property name="hibernate.dialect"> 
+		com.hxtt.support.hibernate.HxttAccessDialect </property> <property name="dialect"> 
+		com.hxtt.support.hibernate.HxttAccessDialect </property -->
+
+	<!-- MySql -->
+	<!-- property name="connection.url"> jdbc:mysql://localhost:3306/anydata?useUnicode=true&amp;characterEncoding=UTF-8 
+		</property> <property name="dialect"> org.hibernate.dialect.MySQLDialect 
+		</property> <property name="useUnicode">true</property> <property name="characterEncoding">UTF-8</property> 
+		<property name="myeclipse.connection.profile">mysql</property> <property 
+		name="connection.username">root</property> <property name="connection.password">root</property> 
+		<property name="connection.driver_class"> com.mysql.jdbc.Driver </property -->
+
+	<!-- oralce -->
+	<!-- property name="connection.username">nhbpm</property> <property name="connection.url">jdbc:oracle:thin:@localhost:1521:nhbpm</property> 
+		<property name="dialect">org.hibernate.dialect.Oracle9Dialect</property> 
+		<property name="myeclipse.connection.profile">oralce</property> <property 
+		name="connection.password"></property> <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property -->
+
+	<!-- Sql -->
+	<!-- property name="connection.username">sa</property> <property name="connection.url"> 
+		jdbc:sqlserver://localhost:1433;databaseName=wpgl </property> <property name="dialect"> 
+		org.hibernate.dialect.SQLServerDialect </property> <property name="myeclipse.connection.profile">sql2005</property> 
+		<property name="connection.password"></property> <property name="connection.driver_class"> 
+		com.microsoft.jdbc.sqlserver.SQLServerDriver </property -->
+
+	<!-- property name="hibernate.proxool.pool_alias">"MSSQLPool"</property -->
+	<!-- property name="hibernate.proxool.xml">/WEB-INF/spring-datasource.xml</property -->
+
+
+	<!-- property name="current_session_context_class">thread</property -->
+
+	<!--property name="cache.use_second_level_cache">true</property -->
+	<!--启用二级缓存 -->
+	<!-- property name="cache.provider_class">org.hibernate.cache.EhCacheProvider</property! -->
+	<!-- 不多说了 -->
+	<!-- property name="cache.use_query_cache">true</property -->
+	<!-- 启用查询缓存，说明一下：如果不设置“查询缓存”，那么hibernate只会缓存使用load()方法获得的单个持久化对象， 如果想缓存使用findall()、 
+		list()、Iterator()、createCriteria()、createQuery()等方法获得的数据结果集的话， 就需要设置，通过日志发现只要是靠sql来判断是否已经缓存了数据 -->
+
+	<!-- 只是在测试的时候用这个mapping，真正系统访问我已经用了spring的@Entity不需要写引入，只要扫描包就可以了 -->
+
+	<!-- property name="hibernate.connection.url">jdbc:access:///f:/workspace/anydata003.mdb</property -->
+	<!-- property name="hibernate.dialect">com.hxtt.support.hibernate.HxttAccessDialect</property -->
+
+	<!-- property name="hibernate.connection.username"></property> <property 
+		name="hibernate.connection.password"></property> <property name="hibernate.dialect"> 
+		</property> <property name="hibernate.connection.url">jdbc:odbc:anydata</property> 
+		<property name="hibernate.connection.driver_class">sun.jdbc.odbc.JdbcOdbcDriver</property> 
+		<property name="hiberante.show_sql">true</property -->
+
+
+
+	<property name="connection.url">jdbc:odbc:driver={Microsoft Access Driver (*.mdb)};DBQ=E:\workspace\anydata003.mdb </property>
+	<property name="dialect">
+		org.hibernate.dialect.SQLServerDialect
+	</property>
+	<property name="connection.username"></property>
+	<property name="connection.password"></property>
+	<property name="connection.driver_class">
+		sun.jdbc.odbc.JdbcOdbcDriver
+	</property>
+
+   <property name="useUnicode">true</property> 
+   <property name="characterEncoding">UTF-8</property> 
+
+
+	<property name="current_session_context_class">thread</property>
+	<mapping class="com.senlo.analyze.main.bean.Usertab" />
+
+</session-factory>
+
+</hibernate-configuration>
+ 

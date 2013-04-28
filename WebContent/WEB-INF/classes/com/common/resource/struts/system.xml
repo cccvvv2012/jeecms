@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<constant name="struts.ui.theme" value="simple" />
+	<package name="default" namespace="/system" extends="struts-default">
+		<!-- org.springframework.web.struts.DelegatingActionProxy struts1.0交给spring的处理 -->
+		<action name="login" class="com.demo.study.system.user.controller.IndexAction" method="login">
+			<result name="success">/view/login/login.jsp</result>
+			<result name="error">/view/login/login.jsp</result>
+		</action>
+	   <action name="index" class="com.demo.study.system.user.controller.IndexAction"  >
+			<result name="success">/view/login/login.jsp</result>
+			<result name="error">/view/login/login.jsp</result>
+		</action>
+
+       <action name="toIndex" class="com.demo.study.system.user.controller.IndexAction"   method="check" >
+			  
+		</action>
+
+
+	</package>
+
+</struts>

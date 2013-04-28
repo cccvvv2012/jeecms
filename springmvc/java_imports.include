@@ -1,0 +1,14 @@
+import java.util.*;
+
+
+import ${basepackage}.entity.${className};
+import ${basepackage}.dao.${className}Dao;
+import ${basepackage}.manager.${className}Mng;
+import ${basepackage}.vo.query.${className}Query;
+
+/**
+ * @author zhanglin
+ * @version 1.0
+ * @since 1.0
+ */
+

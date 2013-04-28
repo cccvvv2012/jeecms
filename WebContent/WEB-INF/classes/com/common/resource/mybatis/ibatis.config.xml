@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMapConfig 	PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN" 	"http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+<sqlMapConfig>
+	<!-- settings cacheModelsEnabled="true" enhancementEnabled="true"
+		lazyLoadingEnabled="true" maxRequests="32" maxSessions="20"
+		maxTransactions="10" useStatementNamespaces="true" />
+		<typeHandler javaType="java.lang.String" jdbcType="CLOB"
+		callback="com.ibatis.sqlmap.engine.type.ClobTypeHandlerCallback" />
+		<transactionManager type="JDBC">
+		<dataSource type="SIMPLE">
+		<property name="JDBC.Driver"
+		value="oracle.jdbc.driver.OracleDriver" />
+		<property name="JDBC.ConnectionURL"
+		value="jdbc:oracle:thin:@127.0.0.1:1521:ora9i" />
+		<property name="JDBC.Username" value="base_gov" />
+		<property name="JDBC.Password" value="11" />
+		<property name="Pool.MaximumActiveConnections" value="10" />
+		<property name="Pool.MaximumIdleConnections" value="10" />
+		<property name="Pool.MaximumCheckoutTime" value="120000" />
+		<property name="Pool.TimeToWait" value="500" />
+		<property name="Pool.PingQuery" value="select 1 from dual" />
+		<property name="Pool.PingEnabled" value="false" />
+		<property name="Pool.PingConnectionsOlderThan" value="1" />
+		<property name="Pool.PingConnectionsNotUsedFor" value="1" />
+		</dataSource>
+		</transactionManager -->
+	
+	<settings cacheModelsEnabled="true" enhancementEnabled="true"
+		lazyLoadingEnabled="true" maxRequests="32" maxSessions="20"
+		maxTransactions="10" useStatementNamespaces="true" />
+    <!-- properties url="file:///c" /-->
+	<transactionManager type="JDBC">
+	<!-- access数据库>
+		<transactionManager type="JDBC">
+		<dataSource type="SIMPLE">
+		<property name="JDBC.Driver"
+		value="sun.jdbc.odbc.JdbcOdbcDriver" />
+		<property name="JDBC.ConnectionURL"
+		value="jdbc:odbc:driver={Microsoft Access Driver (*.mdb)};DBQ=E:\\apache-tomcat-6.0.33\\webapps\\wjh\\db\\wpgl.mdb" />
+		<property name="JDBC.Username" value="" />
+		<property name="JDBC.Password" value="" />
+		</dataSource>
+		
+		</transactionManager>
+		
+		<sql数据库>
+		<dataSource type="SIMPLE">
+		<property name="JDBC.Driver"
+		value="net.sourceforge.jtds.jdbc.Driver" />
+		<property name="JDBC.ConnectionURL"
+		value="jdbc:jtds:sqlserver://127.0.0.1:1433/wpgl" />
+		<property name="JDBC.Username" value="sa" />
+		<property name="JDBC.Password" value="" />
+		
+		</dataSource>
+		
+		<oracle数据库>
+		<dataSource type="SIMPLE">
+		<property name="JDBC.Driver"
+		value="oracle.jdbc.driver.OracleDriver" />
+		<property name="JDBC.ConnectionURL"
+		value="jdbc:oracle:thin:@127.0.0.1:1521:ora10g" />
+		<property name="JDBC.Username" value="ltmail" />
+		<property name="JDBC.Password" value="aa" />
+		</dataSource>
+		
+		<mysql数据库>
+		<dataSource type="SIMPLE">
+		<property name="JDBC.Driver" value="com.mysql.jdbc.Driver" />
+		<property name="JDBC.ConnectionURL"
+		value="jdbc:mysql://127.0.0.1:3306/intouch2" />
+		<property name="JDBC.Username" value="root" />
+		<property name="JDBC.Password" value="root" />
+		</dataSource-->
+	
+	
+	<dataSource type="SIMPLE">
+            <property name="JDBC.Driver" value="sun.jdbc.odbc.JdbcOdbcDriver" />
+            <property name="JDBC.ConnectionURL" value="jdbc:odbc:driver={Microsoft Access Driver (*.mdb)};DBQ=E:\\db\\crm.mdb" />
+            <property name="JDBC.Username" value="" />
+            <property name="JDBC.Password" value="" />
+        </dataSource>
+
+	</transactionManager>
+
+	<!-- sqlMap resource="com/xbs/crm/wpgl/dao/ibaImpl/user.xml" / -->
+	 
+</sqlMapConfig>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC 
+	"-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" 
+	"http://getahead.org/dwr/dwr20.dtd">
+<dwr>
+	<allow>
+		<create javascript="loginDwr" creator="new">
+			<param name="class"
+				value="com.demo.study.system.user.controller.Login">
+			</param>
+		</create>
+		 
+		 <!-- 如果是spring我们则需要用beanName 或者调用实例化以后的类来注明  -->
+		 <create javascript="userService" creator="spring">
+			<param name="beanName"
+				value="userService">
+			</param>
+		</create>
+		<convert converter="bean" match="com.demo.study.system.user.*"></convert>
+	</allow>
+</dwr>
